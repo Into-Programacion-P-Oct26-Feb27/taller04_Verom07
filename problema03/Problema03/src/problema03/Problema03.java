@@ -30,9 +30,26 @@ public class Problema03 {
         titular = entrada.nextLine();
         System.out.println("Ingrese su dirección");
         direccion = entrada.nextLine();
-        System.out.println("Ingrese ");
+        
+        System.out.println("Ingrese su costo por minutos");
+        costoMinuto = entrada.nextDouble();
+        System.out.println("Ingrese sus minutos consumidos");
         minutosConsumidos = entrada.nextInt();
         
+        totalPago = costoMinuto * minutosConsumidos;
+        
+        System.out.printf("===============================\n"
+                + "PLANILLA DE SERVICIO TELEFÓNICO"
+                + "\n================================\nTitular: %s\nDirección: %s"
+                + "\n--------------------------------\nCosto por minuto: $%.2f\n"
+                + "Minutos consumidos: %d\n---------------------------------\n"
+                + "VALOR TOTAL A PAGAR: $%.2f"
+                + "\n=================================\n",
+                titular,
+                direccion,
+                costoMinuto,
+                minutosConsumidos,
+                totalPago);
     }
     
 }
